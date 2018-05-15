@@ -1,4 +1,4 @@
-package Server;
+package Deprecated;
 
 public class DataReciever2 {
 }

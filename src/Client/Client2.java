@@ -37,15 +37,20 @@ public class Client2 {
 
 
 
-                        System.out.println("Sending this line to the server...");
+
                         //for(int i= 0; i < filelist.length; i++) {
                     for (File file2 : filelist) {
-
-                            out.writeUTF(file2.getName()); // отсылаем введенную строку текста серверу.
+                        String Concat = "TIDq" + file2.getName() + "qUNI";
+                            out.writeUTF(Concat);
+                        System.out.println("Sending this line to the server...");
+                        Concat = null;
+                            // отсылаем введенную строку текста серверу.
                             out.flush(); // заставляем поток закончить передачу данных.
-                            //line = in.readUTF(); // ждем пока сервер отошлет строку текста.
+                            line = in.readUTF();
+                            System.out.printf(line);// ждем пока сервер отошлет строку текста.
                             }
                        // }
+                    out.writeUTF("TIDq20180403qUNI");
 
                         line = in.readUTF();
 

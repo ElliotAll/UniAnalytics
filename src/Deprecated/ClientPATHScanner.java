@@ -1,4 +1,4 @@
-package Client;
+package Deprecated;
 
 import java.io.*;
 import java.net.InetAddress;
